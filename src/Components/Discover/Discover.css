@@ -84,9 +84,10 @@
   position: absolute;
   z-index: 2;
   bottom: 0;
-  width: 100%;
   padding: 1rem 2rem 1rem;
-  justify-content: left;
+  justify-content: space-between;
+  width: 85%;
+  justify-content: space-between;
 }
 .discover .secContainer .discoverContainer .singleDestination .descInfo::after {
   content: " ";
@@ -99,8 +100,9 @@
   z-index: -1;
 }
 .discover .secContainer .discoverContainer .singleDestination .descInfo .text {
-  gap: 0.5rem;
-  color: var(--blackColor);
+  gap: 1rem;
+  color: var(--whiteColor);
+  font-size: var(--smallestFontSize);
 }
 .discover .secContainer .discoverContainer .singleDestination .descInfo .text .name {
   display: block;
@@ -108,8 +110,9 @@
   padding-bottom: 0.3rem;
   font-weight: var(--h2FontSize);
 }
-.discover .secContainer .discoverContainer .singleDestination .descInfo .text .flex, .discover .secContainer .discoverContainer .singleDestination .descInfo .text .icon {
-  font-size: var(--normalFontSize);
+.discover .secContainer .discoverContainer .singleDestination .descInfo .text .flex,
+.discover .secContainer .discoverContainer .singleDestination .descInfo .text .icon {
+  font-size: var(--smallestFontSize);
 }
 .discover .secContainer .discoverContainer .singleDestination .descInfo .rating {
   padding: 8px 1rem;

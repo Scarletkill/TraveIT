@@ -1,6 +1,6 @@
-import './App.css'
+import './App.css';
 import Navbar from './Components/Navbar/Navbar';
-import Discover from './Components/Discover/Discover'
+import Discover from './Components/Discover/Discover';
 import Footer from './Components/Footer/Footer'
 import Middle from './Components/Middle/Middle'
 import Home from './Components/Home/Home';
@@ -14,8 +14,8 @@ function App() {
       <Home />
       <Middle />
       <Discover />
-      {/* <Footer />
       <Profile />
+      {/* <Footer />
       <Review />
       <Trip /> */}
     </div>

@@ -9,7 +9,48 @@ import { CiSearch } from "react-icons/ci";
 import { IoLocationOutline } from "react-icons/io5";
 
 import image1 from "../../Assests/Annapurna.jpg"
+import image2 from "../../Assests/AnnapurnaNightView.jpg"
+import image3 from "../../Assests/Everest.jpg"
+import image4 from "../../Assests/landscape.jpg"
+import image5 from "../../Assests/langtang.jpg"
 
+const discover = [
+  {
+    id: 1,
+    img: image1,
+    name: 'Annapurna Base Camp route',
+    location: 'Gaulagiri',
+    rating: 4.7,
+  },
+  {
+    id: 2,
+    img: image2,
+    name: 'Annapurna II Base Camp route',
+    location: 'Gaulagiri',
+    rating: 4.7,
+  },
+  {
+    id: 3,
+    img: image3,
+    name: 'Everest Base Camp route',
+    location: 'Gaulagiri',
+    rating: 4.7,
+  },
+  {
+    id: 4,
+    img: image4,
+    name: 'Mardi Himal trek route',
+    location: 'Gaulagiri',
+    rating: 4.7,
+  },
+  {
+    id: 5,
+    img: image5,
+    name: 'Langtang trek route',
+    location: 'Gaulagiri',
+    rating: 4.7,
+  }
+]
 
 const Discover = () => {
   return (
@@ -61,25 +102,30 @@ const Discover = () => {
         </div>
 
         <div className="discoverContainer grid">
-          <div className="singleDestination">
-            <div className="imgDiv">
-              <img src={image1} alt='Trek Destination'/>
-              <div className="descInfo flex">
-                <div className='text'>
-                  <span className='name'>
-                    Annapurna Trek Route
-                  </span>
-                  <p className='flex'>
-                  <IoLocationOutline className='icon'/>
-                  Gandaki Province 
-                  </p>
+          {discover.map((destination) => {
+            return (
+              <div className="singleDestination" key={destination.id}>
+                <div className="imgDiv">
+                  <img src={destination.img} alt='Trek Destination' />
+                  <div className="descInfo flex">
+                    <div className='text'>
+                      <span className='name'>
+                        {destination.name}
+                      </span>
+                      <p className='flex'>
+                        <IoLocationOutline className='icon' />
+                        {destination.location}
+                      </p>
+                    </div>
+                    <span className="rating">
+                      {destination.rating}
+                    </span>
+                  </div>
                 </div>
-                <span className="rating">
-                4.7
-              </span>
               </div>
-            </div>
-          </div>
+            )
+          })
+          }
         </div>
       </div>
     </div>
