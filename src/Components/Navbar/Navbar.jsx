@@ -16,6 +16,9 @@ const Navbar = () => {
     setNavBar('menu');
   }
 
+  const[open,setOpen] = useState(false)
+
+  const options=["Travel's discover", "Travel's choice"]
   return (
     <div className='navBar'>
       <div className='logoDiv'>
@@ -24,8 +27,12 @@ const Navbar = () => {
       </div>
       <div className={navBar}>
         <ul>
-          <li className='navList'>
-            Discover
+          <li className='navList'>Discover
+            {/* <button onClick={()=>setOpen(!open)}>Discover </button>
+            {open && (<div>
+              <button className='block hover:bg-gray-100'>Travels Profile</button>
+              <button className='block hover:bg-gray-100'>Travels' Choice</button>
+            </div>)} */}
           </li>
           <li className='navList'>
             Trip

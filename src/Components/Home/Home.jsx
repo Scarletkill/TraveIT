@@ -14,12 +14,13 @@ const Home = () => {
       </h1>
       <p>
         Discover the Nepal's most adventurous nature,
-        life is so short for a
-        trip.
+        life is so short for a trip.
       </p>
       <button className='Btn flex'>
         GET STARTED <AiOutlineSwapRight className='icon' />
       </button>
+
+      
     </div>
 
     <div className="popularPlaces">
