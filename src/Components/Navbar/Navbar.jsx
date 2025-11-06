@@ -3,6 +3,7 @@ import './Navbar.css';
 import { IoLogoTumblr } from 'react-icons/io';
 import { PiDotsNineDuotone } from 'react-icons/pi';
 import { AiFillCloseCircle } from 'react-icons/ai';
+import Signin from '../../Form/signin';
 
 const Navbar = () => {
   //state to track and update Navbar
@@ -48,7 +49,8 @@ const Navbar = () => {
         {/* Icon to remove Navbar */}
         <AiFillCloseCircle className='closeIcon' onClick={hideNavBar} />
       </div>
-      <button className="SignInBtn Btn">Sign Up</button>
+      <Signin />
+      {/* <button className="SignInBtn Btn">Sign In</button> */}
       {/* Icon nto toggle Navbar */}
       <PiDotsNineDuotone className='menuIcon' onClick={showNavBar} />
     </div>
