@@ -17,11 +17,17 @@ const Navbar = () => {
     setNavBar('menu');
   }
 
+const [isModalOpen, setIsModalOpen] = useState(false);
+const openModal =()=>setIsModalOpen(true);
+const closeModal =()=>setIsModalOpen(false);
+
+
   const[open,setOpen] = useState(false)
 
   const options=["Travel's discover", "Travel's choice"]
   return (
-    <div className='navBar'>
+    <>
+     <div className='navBar'>
       <div className='logoDiv'>
         <IoLogoTumblr className="icon" />
         <span>TRAVIT</span>
@@ -49,11 +55,19 @@ const Navbar = () => {
         {/* Icon to remove Navbar */}
         <AiFillCloseCircle className='closeIcon' onClick={hideNavBar} />
       </div>
-      <Signin />
-      {/* <button className="SignInBtn Btn">Sign In</button> */}
+      {/* <Signin /> */}
+      
+      <button className="SignInBtn Btn"onClick={openModal}
+        >Sign In</button>
       {/* Icon nto toggle Navbar */}
       <PiDotsNineDuotone className='menuIcon' onClick={showNavBar} />
     </div>
+    {isModalOpen && (
+      <>
+      <Signin closeModal={closeModal} />
+      </>
+    )}
+    </>
   );
 };
 
