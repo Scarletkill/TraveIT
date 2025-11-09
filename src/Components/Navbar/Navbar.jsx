@@ -4,6 +4,7 @@ import { IoLogoTumblr } from 'react-icons/io';
 import { PiDotsNineDuotone } from 'react-icons/pi';
 import { AiFillCloseCircle } from 'react-icons/ai';
 import Signin from '../../Form/signin';
+import {useAuth} from '../../contexts/authContext';
 
 const Navbar = () => {
   //state to track and update Navbar
@@ -16,6 +17,7 @@ const Navbar = () => {
   const hideNavBar = () => {
     setNavBar('menu');
   }
+  const {userSignIn} = useAuth()
 
 const [isModalOpen, setIsModalOpen] = useState(false);
 const openModal =()=>setIsModalOpen(true);
@@ -57,7 +59,7 @@ const closeModal =()=>setIsModalOpen(false);
       </div>
       {/* <Signin /> */}
       
-      <button className="SignInBtn Btn"onClick={openModal}
+     <button className="SignInBtn Btn"onClick={openModal}
         >Sign In</button>
       {/* Icon nto toggle Navbar */}
       <PiDotsNineDuotone className='menuIcon' onClick={showNavBar} />
